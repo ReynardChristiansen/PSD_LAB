@@ -29,9 +29,14 @@ namespace Project.Repository
         }
 
   
-        public static Customer find(string email)
+        public static Customer findEmail(string email)
         {
             return (from user in db.Customers where user.CustomerEmail == email select user).FirstOrDefault();
+        }
+
+        public static Customer find_Email_Password(string email, string password)
+        {
+            return (from user in db.Customers where user.CustomerEmail == email && user.CustomerPassword == password select user).FirstOrDefault();
         }
 
         public static int NextID()

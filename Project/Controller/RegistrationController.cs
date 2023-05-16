@@ -23,7 +23,7 @@ namespace Project.Controller
         public static string validation(string CustomerName, string CustomerEmail, String CustomerPassword, string CustomerAddress, string CustomerGender)
         {
             bool isAlphanumeric = CustomerPassword.All(char.IsLetterOrDigit);
-            Customer x = CustomerRepository.find(CustomerEmail);
+            Customer x = CustomerRepository.findEmail(CustomerEmail);
 
             if ((CustomerName.Length < 5) || (CustomerName.Length > 50))
             {
