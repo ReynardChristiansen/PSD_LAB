@@ -14,13 +14,13 @@ namespace Project.View.Quest
         {
             
 
-            if(Session["Name"] == null)
+            if(Session["name"] == null)
             {
                 Response.Redirect("Login.aspx");
             }
             else
             {
-                Label.Text = "Selamat Datang " + Session["Name"];
+                Label.Text = "Selamat Datang " + Session["name"];
 
             }
         }
